@@ -30,7 +30,7 @@ client.on('messageCreate', async (msg) => {
 
 		} else if (splitCommand[0] === "!duplicate") {
 			const duplicatedChannel = await msg.guild.channels.create({
-				name: splitCommand[1], // This will break if invalid channel name given.s
+				name: splitCommand[1], // This will break if invalid channel name given.
 				type: 0,
 				permissionOverwrites: [{
 					id: msg.guild.id,
@@ -38,7 +38,7 @@ client.on('messageCreate', async (msg) => {
 				}]
 			});
 
-			var messages = await msg.channel.messages.fetch({ limit: 10 });
+			var messages = await msg.channel.messages.fetch({ limit: 25 });
 			messages = Array.from(messages.values());
 
 			for (var i=messages.length-1; i>=0; i--) {
@@ -50,10 +50,10 @@ client.on('messageCreate', async (msg) => {
             msg.guild.roles.create({
                 //data: {  color: 'FF0000' }
                 name: splitCommand[1], //splitCommand[1],
-                color: 'FF0000',
+                color: splitCommand[2],
                 //permissions: ['SEND_MESSAGES', 'VIEW_CHANNEL']
 
-            }).then(roles => console.log("Created new role with name ${roles.name}")).catch(console.error);
+            }).then(roles => console.log("Created new role with name " + splitCommand[1])).catch(console.error);
         }
 	}
 });

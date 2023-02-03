@@ -1,5 +1,5 @@
-# Private325Bot
-Private version of our 325 bot. If you aren't a dev, get out!
+# 325BotProgressReport1
+This is Group 5's bot for progress report 1!
 
 ## Current Commands
 
