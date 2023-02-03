@@ -1,6 +1,8 @@
 # 325BotProgressReport1
 This is Group 5's bot for progress report 1!
 
+To run, add a file called ".env" to same directory as bot.js. Type in "TOKEN=<your-discord-bot-token>" with no quotes. Then in a terminal, run "node bot.js"
+
 ## Current Commands
 
 - !ping - Bot replies with "Pong!"
